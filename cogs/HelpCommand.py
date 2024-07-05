@@ -18,7 +18,7 @@ class Help(commands.Cog):
         )
         helpembed.add_field(name="</clear:1258819288119119982>", value="Lösche eine Bestimmte anzahl an Chat-Nachrichten", inline=False)
 
-        await ctx.respond(content=f"{ctx.author.mention}", embed=helpembed, ephemeral=True)
+        await ctx.respond(content=f"{ctx.author.mention} - {ctx.command.mention}", embed=helpembed, ephemeral=True)
 
 def setup(bot: commands.Bot):
     bot.add_cog(Help(bot))
