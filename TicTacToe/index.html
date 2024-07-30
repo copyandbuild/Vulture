@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="stuff/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tic Tac Toe</h1>
+        <div id="setup">
+            <input type="text" id="playerName" placeholder="Spielername">
+            <div id="symbolButtons">
+                <input type="radio" name="playerSymbol" id="x-button" value="X" checked>
+                <label for="x-button" class="symbol-button x-symbol">X</label>
+                <input type="radio" name="playerSymbol" id="o-button" value="O">
+                <label for="o-button" class="symbol-button o-symbol">O</label>
+            </div>
+            <button id="startGame">Spiel starten</button>
+        </div>
+                 
+        <div id="board" class="hidden"></div>
+        <div id="message"></div>
+    </div>
+    <script src="stuff/script.js"></script>
+</body>
+</html>

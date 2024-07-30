@@ -1,0 +1,157 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212;
+    color: white;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #e0e0e0;
+    text-shadow: 0 0 10px rgba(128, 0, 128, 0.8); /* Lila Glüheffekt */
+}
+
+#setup {
+    margin-bottom: 20px;
+}
+
+#playerName {
+    padding: 12px;
+    font-size: 1.2em;
+    margin-bottom: 20px; /* Abstand zum nächsten Element vergrößern */
+    border-radius: 8px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: white;
+    box-shadow: 0 0 12px rgba(128, 0, 128, 0.8); /* Lila Glüheffekt */
+    transition: box-shadow 0.3s, background-color 0.3s;
+}
+
+#playerName:focus {
+    background-color: #444;
+    box-shadow: 0 0 16px rgba(128, 0, 128, 1); /* Intensiverer Glüheffekt beim Fokus */
+    outline: none;
+}
+
+#symbolButtons {
+    margin-bottom: 20px;
+}
+
+.symbol-button {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 1.5em;
+    cursor: pointer;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    margin: 0 10px;
+}
+
+.symbol-button.x-symbol {
+    background-color: #e74c3c; /* Roter Hintergrund für `X` */
+    color: white;
+    box-shadow: 0 0 12px rgba(255, 0, 0, 0.8); /* Roter Glüheffekt */
+}
+
+.symbol-button.o-symbol {
+    background-color: #3498db; /* Blau für `O` */
+    color: white;
+    box-shadow: 0 0 12px rgba(0, 0, 255, 0.8); /* Blauer Glüheffekt */
+}
+
+#x-button:checked + .x-symbol {
+    background-color: #c0392b; /* Dunkleres Rot für ausgewählte `X` */
+    box-shadow: 0 0 18px rgba(255, 0, 0, 1); /* Intensiverer roter Glüheffekt */
+}
+
+#o-button:checked + .o-symbol {
+    background-color: #2980b9; /* Dunkleres Blau für ausgewähltes `O` */
+    box-shadow: 0 0 18px rgba(0, 0, 255, 1); /* Intensiverer blauer Glüheffekt */
+}
+
+.symbol-button:hover {
+    transform: scale(1.05); /* Leichte Vergrößerung beim Hover */
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 1.2em;
+    cursor: pointer;
+    background-color: #7d3c98;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    box-shadow: 0 0 12px rgba(128, 0, 128, 0.8); /* Lila Glüheffekt */
+}
+
+button:hover {
+    background-color: #5b2c6f;
+    box-shadow: 0 0 20px rgba(128, 0, 128, 1); /* Stärkerer lila Glüheffekt beim Hover */
+    transform: scale(1.05); /* Leichte Vergrößerung beim Hover */
+}
+
+button.red {
+    background-color: #e74c3c;
+    box-shadow: 0 0 12px rgba(255, 0, 0, 0.8); /* Roter Glüheffekt */
+}
+
+button.red:hover {
+    background-color: #c0392b;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 1); /* Stärkerer roter Glüheffekt beim Hover */
+    transform: scale(1.05); /* Leichte Vergrößerung beim Hover */
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+}
+
+.cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    font-size: 2.5em;
+    background-color: #9b59b6;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 12px rgba(128, 0, 128, 0.8); /* Lila Glüheffekt */
+}
+
+.cell:hover {
+    background-color: #8e44ad;
+    box-shadow: 0 0 20px rgba(128, 0, 128, 1); /* Stärkerer lila Glüheffekt beim Hover */
+}
+
+.win {
+    background-color: #e74c3c !important;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 1); /* Stärkerer roter Glüheffekt für Gewinnzellen */
+}
+
+.hidden {
+    display: none;
+}
+
+#message {
+    margin-top: 20px;
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #e0e0e0;
+    text-shadow: 0 0 10px rgba(128, 0, 128, 0.8); /* Lila Glüheffekt */
+}
